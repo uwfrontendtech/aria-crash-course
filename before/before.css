@@ -1,0 +1,11 @@
+      #footer-links {
+        margin-bottom: 1em;
+      }
+      #footer-links a {
+        padding: 0 0.5em;
+        text-decoration: none;
+      }
+      /* No need for dotted border on buttons in Firefox */
+      button::-moz-focus-inner {
+        border: 0;
+      }

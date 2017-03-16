@@ -1,0 +1,228 @@
+      /* Overall structure */
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        line-height: 1.5em;
+        color: black;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+      }
+      header,
+      footer,
+      #banner,
+      #footer {
+        background-color: #4b2e83;
+        padding: 1em;
+        color: white;
+      }
+      main,
+      #main {
+        float: left;
+        margin: 1em;
+        width: 65%;
+      }
+      aside,
+      #sidebar {
+        float: left;
+        width: 30%;
+        border-left: 1px solid #999;
+        padding-left: 1em;
+      }
+      footer,
+      #footer {
+        clear: left;
+      }
+
+      /* Banner */
+      #uw-name {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin: 0.5em 0;
+      }
+      #event-name {
+        font-weight: bold;
+        font-size: 1.8em;
+        margin: 0.35em 0 0.5em;
+      }
+      /* Menu */
+      #menu ul {
+        display:inline-block;
+        list-style-type: none;
+        margin: 1em;
+        padding:0;
+        border: 1px solid #999;
+      }
+      #menu ul li {
+        display: inline-block;
+        border-right: 1px solid #CCC;
+        font-size: 1.2em;
+        margin-right: -5px;
+      }
+      #menu ul li.last {
+        margin-right: -1px;
+      }
+      #menu ul li a {
+        display: block;
+        padding: 0.25em;
+        color: #4b2e83;
+        background-color: white;
+        text-decoration: none;
+      }
+      #menu ul li a:hover,
+      #menu ul li a:focus {
+        background-color: #4b2e83;
+        color: white;
+      }
+      /* Main */
+      .heading {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+      /* text hide/show control */
+      #text-control {
+        margin-left: 0.25em;
+        padding: 0.25em;
+        border: 1px solid #666;
+        border-radius: 0.25em;
+        font-size: 1em;
+        background-color: #ECECEC;
+      }
+      #text-control:hover,
+      #text-control:focus {
+        background-color: #4b2e83;
+        color: white;
+        cursor: pointer;
+      }
+
+      /* initially hide supplemental text */
+      #supplemental-text {
+        display: none;
+      }
+      /* Form */
+      form div,
+      form p {
+        margin: 1em;
+      }
+      label,
+      .label {
+        display: block;
+        margin-bottom: 0.25em;
+        font-weight: bold;
+      }
+      input,
+      textarea {
+        margin: 0 1.5em;
+        max-width: 90%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        font-weight: normal;
+      }
+      input[type="text"] {
+        width: 30em;
+      }
+      textarea {
+        height: 10em;
+        width: 40em;
+        padding: 0.5em;
+      }
+      #instructions {
+        color: #757575;
+        margin: 0 1.25em;
+      }
+      input#submit {
+        font-size: 1.1em;
+      }
+      #error {
+        display: none;
+        margin: 1em;
+        padding: 1em;
+        font-weight: bold;
+        background-color: #FFC;
+        border: 1px solid #4b2e83;
+        width: 20em;
+      }
+      /* Sidebar */
+      aside ul,
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 1em;
+      }
+      /* Footer */
+      footer,
+      #footer {
+        text-align: center;
+      }
+      footer a,
+      #footer a {
+        color: white;
+      }
+      #copyright {
+        font-size: 0.9em;
+        letter-spacing: 0.1em;
+      }
+      /* Modal pop-up */
+      #modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.8;
+        z-index: 1000;
+      }
+      #modal {
+        display: none;
+        position: fixed;
+        top: 20%;
+        left: 35%;
+        right: 35%;
+        /* height: 40%;*/
+        padding: 1em;
+        border: 1px solid black;
+        background-color: white;
+        opacity: 1;
+        font-size: 1.1em;
+        text-align: center;
+        z-index: 2000;
+      }
+      #modal .heading {
+        font-family: 'Old English Text MT', 'Schwabacher', cursive;
+        font-size: 2em;
+        font-weight: bold;
+        margin: 0.25em 0 1em;
+        line-height: 1em;
+      }
+      #modal button {
+        margin-top: 1em;
+        font-size: 1.1em;
+        border-radius: 5px;
+      }
+      #modal button#close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 0;
+      }
+      /* Visual focus indicator */
+      /* Approximates default indicator in WebKit */
+      a:hover,
+      input:hover,
+      textarea:hover,
+      button:hover,
+      *:focus {
+        border: 1px solid #78aed9 !important;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6) !important;
+        outline: 0 none !important;
+        text-decoration: none;
+      }
+      /* Menu has its own focus indicator */
+      #menu a:hover,
+      #menu a:focus {
+        border: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+      }

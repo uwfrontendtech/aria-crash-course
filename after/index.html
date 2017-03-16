@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>After: UW ARIA Crash Course</title>
+    <link href="../common.css" rel="stylesheet" type="text/css" />
+    <link href="after.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="after.js"></script>
+  </head>
+
+  <body>
+
+    <div id="content">
+
+      <header role="banner" id="banner">
+        <div id="uw-name">University of Washington</div>
+        <h1 id="event-name">ARIA Crash Course</h1>
+        <div id="event-date">UW TechConnect 2017</div>
+      </header>
+
+      <nav role="navigation" id="menu" aria-label="Main menu">
+          <ul>
+            <li><a href="#">Menu Item 1</a></li>
+            <li><a href="#">Menu Item 2</a></li>
+            <li class="last"><a href="#">Menu Item 3</a></li>
+          </ul>
+      </nav>
+
+      <main role="main" id="main">
+
+        <h2 class="heading">About this Page</h2>
+          <p>This page includes a variety of accessibility problems.
+            In this workshop we will explore these problems and their solutions.
+            <button type="button" id="text-control" aria-controls="supplemental-text" aria-expanded="false">Show more</button>
+          </p>
+          <p id="supplemental-text">
+            As an example, this text is initially "hidden" from the user,
+             with its visibility toggled by a simple button control.
+             But how does this appear to a screen reader?
+             Is a non-sighted user able to navigate this content
+             and use the control with ease and understanding?
+          </p>
+
+        <h2 class="heading">Accessible Web Design</h2>
+        <p>Accessible web design is the practice of designing and developing websites that
+          are usable by everyone, including individuals with disabilities.
+          The World Wide Web Consortium (W3C) has developed
+          <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines</a>
+          that serve as the de facto standard for how to create accessible web pages
+          and web applications.
+        </p>
+
+        <h2 class="heading">ARIA</h2>
+        <p>Accessible Rich Internet Applications (ARIA) is a W3C specification that
+          is designed to make interactive web interfaces accessible.
+          It does so by explicitly communicating the roles, states, and properties of
+          user interface elements so assistive technologies such as screen readers
+          and speech recognition technologies can understand them and present them in
+          meaningful ways for their users. ARIA answers questions like:
+        </p>
+        <ul>
+          <li>What is this element?</li>
+          <li>What is its current state? For example, is it selected? expanded? visible?</li>
+        </ul>
+
+        <h2 class="heading">Post-Workshop Questionnaire</h2>
+
+        <form action="#" method="post">
+
+          <p>Please submit the following form upon completion of the workshop.
+            All fields are required.</p>
+
+          <div id="error" role="alert"></div>
+
+          <div>
+            <label for="name" class="label">Your name:</label>
+            <input type="text" id="name" required>
+          </div>
+
+          <div>
+            <label for="question" class="label">What have you learned today about ARIA?</label>
+            <textarea id="question" aria-describedby="instructions" required></textarea>
+            <div id="instructions">Please include at least three lessons learned.</div>
+          </div>
+
+          <div>
+            <input type="submit" id="submit" value="Submit">
+          </div>
+
+        </form>
+
+      </main>
+
+      <aside role="complementary" id="sidebar">
+        <h2 class="heading">Resources</h2>
+        <ul>
+          <li><a href="http://washington.edu/accessibility">UW Accessible Technology</a></li>
+          <li><a href="http://washington.edu/accessibility">UW IT Accessibility Guidelines</a></li>
+          <li><a href="http://www.washington.edu/accessibility/checklist/">UW IT Accessibility Checklist</a></li>
+          <li><a href="http://www.washington.edu/accessibility/web/">Developing Accessible Websites</a></li>
+          <li><a href="http://www.washington.edu/accessibility/web/aria/">Using ARIA for Web Applications</a></li>
+        </ul>
+      </aside>
+
+      <footer id="footer">
+        <nav role="navigation" aria-label="UW links">
+          <ul>
+            <li><a href="http://uw.edu/home/siteinfo/form">Contact Us</a></li>
+            <li><a href="http://www.washington.edu/jobs">Jobs</a></li>
+            <li><a href="http://www.washington.edu/safety">Campus Safety</a></li>
+            <li><a href="http://myuw.washington.edu/">My UW</a></li>
+            <li><a href="http://www.washington.edu/rules/wac">Rules Docket</a></li>
+            <li><a href="http://www.washington.edu/online/privacy/">Privacy</a></li>
+            <li><a href="http://www.washington.edu/online/terms/">Terms</a></li>
+          </ul>
+        </nav>
+        <div id="copyright" role="contentinfo">
+          &copy; 2016 University of Washington. These materials are provided under a
+          <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons License</a>
+          and in accordance with UW's <a href="http://www.washington.edu/online/privacy/">privacy policy</a>
+          and <a href="http://www.washington.edu/online/terms">terms of use</a>.
+        </div>
+      </footer>
+
+    </div><!-- end #content -->
+
+    <div id="modal" role="alertdialog" aria-labelledby="modal-heading">
+      <button type="button" id="close" aria-label="Close dialog">X</button>
+      <h1 id="modal-heading" class="heading">Certificate of Completion</h1>
+      <div><span id="participant">You</span> <span id="has-have">have</span>
+        completed the ARIA Crash Course!
+      </div>
+      <button type="button" id="ok">OK</button>
+    </div>
+    <div id="modal-overlay"></div>
+
+  </body>
+</html>
